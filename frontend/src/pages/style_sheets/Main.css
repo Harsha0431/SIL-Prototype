@@ -1,0 +1,39 @@
+.main-body{
+    grid-template-areas:
+                        'nav'
+                        'content';
+    height: 100vh;
+    overflow: hidden;
+    grid-template-rows: auto 0fr auto;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-areas: 'aside main';
+    grid-template-columns:auto 1fr; /* Sidebar 16vw wide, Main takes remaining space */
+    height: 100%;
+    overflow: hidden;
+}
+
+.navbar-section{
+    grid-area: nav;
+    position: sticky;
+    top:0;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.left-aside-section{
+    grid-area: aside;
+    overflow: auto;
+    height: 100%;
+}
+
+.main-section{
+    overflow: auto;
+    scroll-behavior: smooth;
+    grid-area: main;
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px 5px 10px;
+}
